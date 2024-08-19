@@ -3,7 +3,7 @@ from datetime import timedelta
 from logging import Logger
 from collections.abc import Callable
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
-from tplinkrouterc6u import TplinkRouterProvider, AbstractRouter, Firmware, Status, Connection
+from tplinkroutermr600 import TplinkRouterProvider, AbstractRouter, Firmware, Status, Connection
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import CONNECTION_NETWORK_MAC, DeviceInfo
 from .const import (

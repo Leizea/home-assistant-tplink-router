@@ -14,7 +14,7 @@ from .const import (
     EVENT_ONLINE,
     EVENT_OFFLINE,
 )
-from tplinkrouterc6u import Device, Connection
+from tplinkroutermr600 import Device, Connection
 
 MAC_ADDR: TypeAlias = str
 
