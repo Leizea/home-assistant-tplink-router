@@ -86,7 +86,13 @@ SENSOR_TYPES: tuple[TPLinkRouterSensorEntityDescription, ...] = (
         name="PPPoe connection enabled",
         icon="mdi:wan",
         value=lambda status: status.pppoe_connection_enabled,
-    ),      
+    ),
+    TPLinkRouterSensorEntityDescription(
+        key="pppoe_con_status",
+        name="PPPoe connection status",
+        icon="mdi:wan",
+        value=lambda status: status._pppoe_connection_status,
+    ),     
 )
 
 
