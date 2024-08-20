@@ -82,17 +82,47 @@ SENSOR_TYPES: tuple[TPLinkRouterSensorEntityDescription, ...] = (
         value=lambda status: (status.mem_usage * 100) if status.mem_usage is not None else None,
     ),
     TPLinkRouterSensorEntityDescription(
-        key="pppoe_con_enabled",
-        name="PPPoe connection enabled",
+        key="wan_connection_type",
+        name="WAN Connection type",
         icon="mdi:wan",
-        value=lambda status: status.pppoe_connection_enabled,
+        value=lambda status: status.wan_connection_type,
     ),
     TPLinkRouterSensorEntityDescription(
-        key="pppoe_con_status",
+        key="pppoe_connection_status",
         name="PPPoe connection status",
-        icon="mdi:router-network",
+        icon="mdi:ethernet-cable",
         value=lambda status: status.pppoe_connection_status,
-    ),     
+    ),
+    TPLinkRouterSensorEntityDescription(
+        key="lte_connection_status",
+        name="LTE connection status",
+        icon="mdi:signal-4g",
+        value=lambda status: status.lte_connection_status,
+    ),
+    TPLinkRouterSensorEntityDescription(
+        key="wan_ipv4_addr",
+        name="WAN IP address",
+        icon="mdi:ip-network",
+        value=lambda status: status.wan_ipv4_addr,
+    ), 
+    TPLinkRouterSensorEntityDescription(
+        key="wan_macaddr",
+        name="WAN MAC address",
+        icon="mdi:network-pos",
+        value=lambda status: status.wan_macaddr,
+    ),  
+    TPLinkRouterSensorEntityDescription(
+        key="wan_ipv4_gateway",
+        name="WAN Gateway",
+        icon="mdi:router-network",
+        value=lambda status: status.wan_ipv4_gateway,
+    ),
+    TPLinkRouterSensorEntityDescription(
+        key="wan_dns_servers",
+        name="WAN DNS servers",
+        icon="mdi:dns",
+        value=lambda status: status.wan_dns_servers,
+    ),                          
 )
 
 
