@@ -1,12 +1,12 @@
 # Tp-Link router integration for Home Assistant
-Home Assistant component for TP-Link router administration based on the [TP-Link Router API](https://github.com/AlexandrErohin/TP-Link-Archer-C6U)
+Home Assistant component for TP-Link router administration based on the [TP-Link Router API](https://github.com/Leizea/TP-Link-Archer-C6U)
 
 > [!WARNING]
 > Please temporarily disable the integration before accessing the router admin page. TP-Link admin page only allows one user at a time. This integration will log you out of the admin page every time it scans for updates (every 30s by default).
 
 See [Supported routers](#supports)
 
-<img src="https://raw.githubusercontent.com/AlexandrErohin/home-assistant-tplink-router/master/docs/media/sensors.png" width="48%"> <img src="https://raw.githubusercontent.com/AlexandrErohin/home-assistant-tplink-router/master/docs/media/switches.png" width="48%">
+<img src="https://raw.githubusercontent.com/Leizea/home-assistant-tplink-router/master/docs/media/sensors.png" width="48%"> <img src="https://raw.githubusercontent.com/Leizea/home-assistant-tplink-router/master/docs/media/switches.png" width="48%">
 
 ## Components
 ### Events
@@ -72,10 +72,10 @@ All available fields in `trigger.event.data`:
 
 Have [HACS](https://hacs.xyz/) installed, this will allow you to update easily.
 
-[![Install quickly via a HACS link](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AlexandrErohin&repository=home-assistant-tplink-router&category=integration)
+[![Install quickly via a HACS link](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Leizea&repository=home-assistant-tplink-router&category=integration)
 
 1. Go to the <b>Hacs</b>-><b>Integrations</b>.
-2. Add this repository (https://github.com/AlexandrErohin/home-assistant-tplink-router) as a [custom repository](https://hacs.xyz/docs/faq/custom_repositories/)
+2. Add this repository (https://github.com/Leizea/home-assistant-tplink-router) as a [custom repository](https://hacs.xyz/docs/faq/custom_repositories/)
 4. Click on `+ Explore & Download Repositories`, search for `TP-Link Router`.
 5. Search for `TP-Link Router`.
 6. Navigate to `TP-Link Router` integration
@@ -93,7 +93,7 @@ TP-Link Router is configured via the GUI. See [the HA docs](https://www.home-ass
 
 The default data is preset already.
 
-<img src="https://raw.githubusercontent.com/AlexandrErohin/home-assistant-tplink-router/master/docs/media/config_flow.png" width="48%">
+<img src="https://raw.githubusercontent.com/Leizea/home-assistant-tplink-router/master/docs/media/config_flow.png" width="48%">
 
 1. Go to the <b>Settings</b>-><b>Devices & services</b>.
 2. Click on `+ ADD INTEGRATION`, search for `TP-Link Router`.
@@ -104,7 +104,7 @@ NOTE!
 1. If you use `https` connection to your router you may get error `certificate verify failed: EE certificate key too weak`. To fix this - unset `Verify ssl`
 2. Use Local Password which is for Log In with Local Password
 
-<img src="https://raw.githubusercontent.com/AlexandrErohin/home-assistant-tplink-router/master/docs/media/router.png" width="30%">
+<img src="https://raw.githubusercontent.com/Leizea/home-assistant-tplink-router/master/docs/media/router.png" width="30%">
 
 3. If you got error - `You need to use web encrypted password instead. Check the documentation!` Read [web encrypted password](#encrypted_pass)
 4. The TP-Link Web Interface only supports upto 1 user logged in at a time (for security reasons, apparently). So you will be logged out from router web interface when the integration updates data
@@ -202,4 +202,4 @@ To do that:
 Please let me know if you have tested integration with one of this or other model. Open an issue with info about router's model, hardware and firmware versions.
 
 ## <a id="add_support">Adding Support For More Models</a>
-Guidelines [CONTRIBUTING.md](https://github.com/AlexandrErohin/TP-Link-Archer-C6U/blob/master/CONTRIBUTING.md)
+Guidelines [CONTRIBUTING.md](https://github.com/Leizea/TP-Link-Archer-C6U/blob/master/CONTRIBUTING.md)
